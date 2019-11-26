@@ -10,21 +10,19 @@ Image classifier built with pytorch. Pretrained with imagenet. Currently a CLI s
 * works with or without a GPU
 
 ## Train.py CLI arguments
-: --compute cpu/cuda 
- (defaults to cuda if compatiable GPU is available)
-: --arch vgg/densenet 
- (defaults to densenet because of the high accuracy and low memory footprint)
-: --hidden 512
- (default is 512, but any positive integer is ok. Play around if you have spare processor cycles)
-: --LR 0.001
- (Default is 0.001, but try bigger or smaller floats. Less than 1 is recommended.)
-: --epochs 5
- (Default is 5, the vgg model will likely benefit from 
+python train.py | values | description
+------------ | ------------- | -------------
+--arch | vgg/densenet | Choose between two Pretrained networks, defaults to densenet because of the high accuracy and low memory footprint
+--compute | cpu/cuda | Choose which processor will build the model. Defaults to cuda if compatiable GPU is available
+--hidden | 512 | This the number of nodes in the hidden layer. The default is 512, but any positive integer is ok. Play around if you have spare processor cycles
+--LR | 0.001 | Choose the learning rate to find the local minimum. Default is 0.001, but try bigger or smaller floats. Less than 1 is recommended.
+--epochs | 5 | THis is how many times the model will train with our added on dataset. The default is 5, the vgg model will likely benefit from at least 50 epochs.
 
 ## Predict.py CLI arguments
-: --model vgg (70%) / densenet (90%)    
-: --compute cpu/cuda 
- the default uses cuda is a compatible GPU is available or falls back to CPU
+python predict.py | values | description
+------------ | ------------- | -------------
+--model | vgg (70%) / densenet (90%) | This comes with 2 pretrained and finetuned models. The default is densenet because of the low memory footprint.
+--compute | cpu/cuda | The default uses cuda is a compatible GPU is available or falls back to CPU. It works fine with just a CPU though and some of the math runs on the CPU anyway.
 
 
 _Submitted as the final project for Udacity's AI Programming with Python Nanodegree program._
