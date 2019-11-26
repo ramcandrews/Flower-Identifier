@@ -17,7 +17,6 @@ Image classifier built with pytorch. Pretrained with imagenet. Currently a CLI s
  --epochs (Default is 5, the vgg model will likely benefit from 
 
 ## Predict.py CLI arguments
--------------
  --model vgg (70%) or densenet (90%)    
  --compute cpu or cuda, the default uses cuda is a compatible GPU is availableor falls back to CPU
 
