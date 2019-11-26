@@ -10,20 +10,20 @@ Image classifier built with pytorch. Pretrained with imagenet. Currently a CLI s
 * works with or without a GPU
 
 ## Train.py CLI arguments
- --compute cpu/cuda 
+: --compute cpu/cuda 
  (defaults to cuda if compatiable GPU is available)
- --arch vgg/densenet 
+: --arch vgg/densenet 
  (defaults to densenet because of the high accuracy and low memory footprint)
- --hidden 512
+: --hidden 512
  (default is 512, but any positive integer is ok. Play around if you have spare processor cycles)
- --LR 0.001
+: --LR 0.001
  (Default is 0.001, but try bigger or smaller floats. Less than 1 is recommended.)
- --epochs 5
+: --epochs 5
  (Default is 5, the vgg model will likely benefit from 
 
 ## Predict.py CLI arguments
- --model vgg (70%) / densenet (90%)    
- --compute cpu/cuda 
+: --model vgg (70%) / densenet (90%)    
+: --compute cpu/cuda 
  the default uses cuda is a compatible GPU is available or falls back to CPU
 
 
